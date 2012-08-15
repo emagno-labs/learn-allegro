@@ -66,8 +66,8 @@ Allegro 5
 Dependências da Allegro
 ---------------------------
 * [Ogg (libogg)](http://xiph.org/downloads/) *Compilado*
-	- C:\MinGW\msys\1.0\msys.bat
 	- descompacte para a pasta c:/temp/libvorbs
+	- C:\MinGW\msys\1.0\msys.bat
 		- cd c:/temp/libvorbs
 		- ./configure
 		- make
@@ -78,8 +78,8 @@ Dependências da Allegro
 	- apague o conteudo de C:\MinGW\msys\1.0\local
 
 * [Vorbis(libvorbis)](http://xiph.org/downloads/) *Compilado*
-	- C:\MinGW\msys\1.0\msys.bat
 	- descompacte para a pasta c:/temp/libvorbs
+	- C:\MinGW\msys\1.0\msys.bat
 		- cd c:/temp/libvorbs
 		- ./configure
 		- make
@@ -89,8 +89,8 @@ Dependências da Allegro
 	- apague o conteudo de C:\MinGW\msys\1.0\local
 
 * [FLAC](http://sourceforge.net/projects/flac/files/flac-src/flac-1.2.1-src/) *Compilado*
-	- C:\MinGW\msys\1.0\msys.bat
 	- descompacte para a pasta c:/temp/flac
+	- C:\MinGW\msys\1.0\msys.bat
 		- cd c:/temp/flac
 		- ./configure
 		- make
