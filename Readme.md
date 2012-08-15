@@ -67,54 +67,65 @@ Dependências da Allegro
 ---------------------------
 * [Ogg (libogg)](http://xiph.org/downloads/) *Compilado*
 	- C:\MinGW\msys\1.0\msys.bat
-	- ir para diretorio
-		- cd c: (xpto)
-		- cd libogg
+	- descompacte para a pasta c:/temp/libvorbs
+		- cd c:/temp/libvorbs
 		- ./configure
 		- make
 		- make install
-	- copie as pastas "include" e "lib" para a pasta "libogg" em "deps"
-	- copie as pastas do ogg para C:\MinGW
+	- crie o diretorio "libogg" em C:/Allegro5/deps
+	- copie de C:\MinGW\msys\1.0\local as pastas para a pasta C:/Allegro5/deps/libogg
+	- copie de C:\MinGW\msys\1.0\local para C:\MinGW
+	- apague o conteudo de C:\MinGW\msys\1.0\local
 
 * [Vorbis(libvorbis)](http://xiph.org/downloads/) *Compilado*
 	- C:\MinGW\msys\1.0\msys.bat
-	- ir para diretorio
-		- cd c: (xpto)
-		- cd libvorbis
+	- descompacte para a pasta c:/temp/libvorbs
+		- cd c:/temp/libvorbs
 		- ./configure
 		- make
 		- make install
-	- copie as pastas "include" e "lib" para a pasta "libvorbis" em "deps"
+	- crie o diretorio "libvorbis" em C:/Allegro5/deps	
+	- copie de C:\MinGW\msys\1.0\local as pastas para a pasta C:/Allegro5/deps/libvorbis
+	- apague o conteudo de C:\MinGW\msys\1.0\local
 
-* [FLAC](http://flac.sourceforge.net/) *Compilado*
+* [FLAC](http://sourceforge.net/projects/flac/files/flac-src/flac-1.2.1-src/) *Compilado*
 	- C:\MinGW\msys\1.0\msys.bat
-	- ir para diretorio
-		- cd c: (xpto)
-		- cd flac
+	- descompacte para a pasta c:/temp/flac
+		- cd c:/temp/flac
 		- ./configure
 		- make
 		- make install
-	- copie as pastas "include" e "lib" para a pasta "flac" em "deps"
+	- crie o diretorio "flac" em C:/Allegro5/deps
+	- copie de C:\MinGW\msys\1.0\local as pastas para a pasta C:/Allegro5/deps/flac
+	- apague o conteudo de C:\MinGW\msys\1.0\local
 
 * [DUMB](http://dumb.sourceforge.net/) *Compilado*
-	- cd c:/dumb
+	- descompacte para a pasta c:/temp/dumb
+	- vá para o prompt de comando (iniciar -> executar -> cmd) 
+	- cd c:/temp/dumb
 	- mingw32-make
 		- Would you like to compile DUMB for DJGPP or MinGW (D/M)? M
 		- Would you like support for Allegro (Y/N) N
-	- copie as pastas "include" e "lib" para a pasta "dumb" em "deps"
+	- crie o diretorio "dumbs" em C:/Allegro5/deps
+	- copie de c:/temp/dumb as pastas "lib" e "include" para a pasta C:/Allegro5/deps/dumbs
 
 * [OpenAL](http://kcat.strangesoft.net/openal.html) *Binários*
 	- baixe os binários para Windows
-	- após descompactar copie as pastas "include" e "lib" para a pasta "openal" em "deps"
+	- descompacte para a pasta c:/temp/openal
+	- crie o diretorio "dumbs" em C:/Allegro5/deps
+	- copie de c:/temp/openal as pastas "lib" e "include" para a pasta C:/Allegro5/deps/openal
 
 * [FreeType](http://gnuwin32.sourceforge.net/packages/freetype.htm) *Binários*
 	- baixe os binários para Windows
-	- após descompactar copie as pastas para a pasta "freetype" em "deps"
+	- descompacte para a pasta c:/temp/freetype
+	- crie o diretorio "freetype" em C:/Allegro5/deps
+	- copie de c:/temp/freetype as pastas "lib" e "include" para a pasta C:/Allegro5/deps/freetype
 
 * [dx9mgw.zip](http://alleg.sourceforge.net/download.html) *Binários*
 	- Encontre e baixo o arquivo dx9mgw.zip
-	- Descompacte na pasta C:\MinGW (ou onde vc instalou o MinGW)
-	- Sobrescreva os arquivos que tem o mesmo nome
+	- descompacte para a pasta c:/temp/dx9
+	- copie de c:/temp/dx9 todas as pastas para a pasta C:\MinGW
+		- Sobrescreva os arquivos que tem o mesmo nome
 
 
 Compilando a Allegro 5
