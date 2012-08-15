@@ -28,6 +28,11 @@ Precisamos montar um ambiente de desenvolvimento que nos possibilite trabalhar c
 Abaixo vamos tratar de itens como compiladores, bibliotecas externas (dependências), IDE de desenvolvimento.
 Na maioria dos casos os fontes das bibliotecas serão baixados e compilados utilizando o compilador que estaremos trabalhando.
 
+*Nos passos abaixo são sugeridos alguns diretórios padronizados, como _c:\Allegro5_, _c:\MinGW_ ou _c:\temp_*
+Caso queira utilizar outros diretorios duas dicas:
+	1. Não utilize _espaços_ no nome dos diretórios: _"Meus Documentos"_ ou "Trabalho Facul" são exemplos que darão erro.
+	2. Não se esqueça de substituir os caminhos mostrados no tutorial pelos caminhos que você escolheu. Óbvio. ¬¬
+
 
 Compilador e _build system_
 -----------------------------
@@ -60,8 +65,8 @@ Allegro 5
 * [Allegro5](http://alleg.sourceforge.net/download.html) *Compilado*
 	- Baixe a versão mais atual (allegro-5.0.7.zip) da Allegro
 	- Descompacte na pasta C:/Allegro5
-	- Crie um diretorio "build" dentro desta pasta
-	- Crie um diretorio "deps" dentro desta pasta
+	- Crie um diretorio "build" dentro desta pasta (C:/Allegro5/build)
+	- Crie um diretorio "deps" dentro desta pasta (C:/Allegro5/deps)
 
 Dependências da Allegro
 ---------------------------
