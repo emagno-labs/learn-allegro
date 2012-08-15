@@ -28,10 +28,12 @@ Precisamos montar um ambiente de desenvolvimento que nos possibilite trabalhar c
 Abaixo vamos tratar de itens como compiladores, bibliotecas externas (dependências), IDE de desenvolvimento.
 Na maioria dos casos os fontes das bibliotecas serão baixados e compilados utilizando o compilador que estaremos trabalhando.
 
-*Nos passos abaixo são sugeridos alguns diretórios padronizados, como _c:\Allegro5_, _c:\MinGW_ ou _c:\temp_*
+**Nos passos abaixo são sugeridos alguns diretórios padronizados, como _c:\Allegro5_, _c:\MinGW_ ou _c:\temp_**
+
 Caso queira utilizar outros diretorios duas dicas:
-	1. Não utilize _espaços_ no nome dos diretórios: _"Meus Documentos"_ ou "Trabalho Facul" são exemplos que darão erro.
-	2. Não se esqueça de substituir os caminhos mostrados no tutorial pelos caminhos que você escolheu. Óbvio. ¬¬
+
+* Não utilize _espaços_ no nome dos diretórios: _"Meus Documentos"_ ou "Trabalho Facul" são exemplos que darão erro.
+* Não se esqueça de substituir os caminhos mostrados no tutorial pelos caminhos que você escolheu. Óbvio. ¬¬
 
 
 Compilador e _build system_
@@ -71,9 +73,9 @@ Allegro 5
 Dependências da Allegro
 ---------------------------
 * [Ogg (libogg)](http://xiph.org/downloads/) *Compilado*
-	- descompacte para a pasta c:/temp/libvorbs
+	- descompacte para a pasta c:/temp/libogg
 	- C:\MinGW\msys\1.0\msys.bat
-		- cd c:/temp/libvorbs
+		- cd c:/temp/libogg
 		- ./configure
 		- make
 		- make install
