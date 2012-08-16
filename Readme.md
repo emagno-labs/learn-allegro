@@ -39,9 +39,21 @@ Caso queira utilizar outros diretorios duas dicas:
 
 Compilador e _build system_
 -----------------------------
-* [MinGW](http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/)
-	- Baixar o instalador mingw-get-inst-20120426.exe
-	- next -> next -> escolher download latest repository catalogs e next -> next -> next -> escolher os compiladores C, C++ e MinGW Developer Toolkit e next -> Install
+* [MinGW](http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/) **Atenção: _Requer conexão com a Internet para realizar a instalação!_**
+	- Baixar o instalador (este tutorial foi homologado com a versão **mingw-get-inst-20120426.exe** do instalador)
+	- Execute o instalador
+		- Tela _Welcome_: Clique em _Next_
+		- Tela _Administrator Install_ (se você estiver como administrador do Windows): Clique _Next_
+		- Tela _Repository Catalogues_: Marque a opção **Download latest repository packages** e clique em _Next_
+		- Tela _License Agreement_: Aceite as condições (_I accept the agreement_) e clique em _Next_
+		- Tela _Select Destination Location_: Escolha o diretório de instalação. É recomendado manter o diretório sugerido **C:\MinGW**. Clique em _Next_
+		- Tela _Select Start Menu Folder_: Clique em _Next_
+		- Tela _Select Components_: Marque as opções abaixo e depois clique em _Next_
+			- C Compiler
+			- C++ Compiler
+			- MinGW Developer ToolKit
+		- Tela _Ready to Install_: Clique em _Install_
+			- O programa de instalação do MinGW irá atualizar sua lista de pacotes e depois irá baixar as versões mais atualizadas. O procedimento pode levar alguns minutos.
 
 	- Pequena correção de um cabeçalho (.h) do MinGW:
 		- Abra o arquivo _limits.h_ que está em _C:/mingw/include_ e encontre o trecho de código abaixo (final do arquivo)
@@ -72,18 +84,29 @@ Compilador e _build system_
 
 
 * [Cmake](http://cmake.org/cmake/resources/software.html)
-	- Baixar o instalador Windows (Win32 Installer)
-	- Instale o Cmake. Na guia "Install Options", escolha "add Cmake to the system path for all users"
+	- Baixar o instalador Windows (este tutorial foi homologado com a versão **cmake-2.8.9-win32-x86.exe** do instalador)
+	- Execute o instalador
+		- Tela _Bem Vindo_: Clique em _Próximo_
+		- Tela _Acordo da Licensa_: Clique em _Eu Concordo_
+		- Tela _Install Options_: Escolha a opção **_Add CMake to the system PATH for all users_** e clique em _Próximo_
+		- Tela _Escolher o Local da Instalação_: Clique em _Próximo_
+		- Tela _Escolher a Pasta do Menu Iniciar_: Clique em _Instalar_
 
 
 Configurando as variáveis de ambiente
 -------------------------
-* No windows explorer clicar com o botão direito em "Computador" -> Propriedades
-* Ir em Configurações Avançadas -> Variaveis de Ambiente
-* Na segunda caixa, "Variaveis do sistema", encontrar a variavel "Path" -> selecione e escolha editar
-	* No final do Valor da variável incluir: ;C:\MinGW\bin (com o ";"!!!)
-* Criar variavel de ambiente MINGDIR
-	* Configure o valor da MINGDIR para C:\MinGW\
+* No windows explorer clique com o botão direito em **Computador** -> **Propriedades**
+* Ir em **Configurações Avançadas** -> **Variaveis de Ambiente**
+* Na segunda caixa, **Variaveis do sistema**, encontrar a variavel **Path** 
+	- Selecione a variável e escolha editar
+	- No final do Valor da variável incluir: **;C:\MinGW\bin** 
+		- **CUIDADO!** Tem que ter o **_;_** (ponto-e-virgula) antes!
+	- Clique em _OK_
+* Ainda na segunda caixa, clique em _Novo..._ para criar uma nova variavel de ambiente 
+	- Configure o nome da variavel como **MINGDIR**
+	- Configure o valor da **MINGDIR** para **C:\MinGW\**
+	- Clique em _Ok_
+* Clique em _Ok_ e depois novamente em _Ok_
 
 Allegro 5
 ---------------------------
@@ -166,7 +189,9 @@ Compilando a Allegro 5
 * Abra o prompt de comando (CMD) e vá para o diretorio C:/Allegro5/build
 * Digite os comandos:
 	- cmake .. -G "MinGW Makefiles"
-		- **Cuidado!** É _case sensitive_
+		- **Cuidado!** É _case sensitive_!
+		- **Mais CUIDADO ainda!** o comando só funcionará se for digitado _corretamente_! Então vamos ilustrar (Onde estiver escrito _[espaço]_ digite um _espaço_. Não vá escrever _[espaço]_ na linha de comando ¬¬):
+			- **cmake**[espaço]**..**[espaço]**-G**[espaço]**"MinGW Makefiles"**
 	- mingw32-make
 	- mingw32-make install
 
