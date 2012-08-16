@@ -1,11 +1,10 @@
-﻿Learn Allegro
+﻿Aprenda Allegro em C
 ================================
 
 *_website_ Oficial [Allegro](http://alleg.sourceforge.net/).*
 
 Os fontes deste projetos é um _port_ do código fonte do curso [2D Game Development Course](http://fixbyproximity.com/2d-game-development-course/), original em C++ para C.
 
-Below are the parts which the port was made.
 Abaixo estão listados os capítulos do curso que o código foi migrado.
 
 Part 5
@@ -27,6 +26,8 @@ Ambiente de desenvolvimento
 Precisamos montar um ambiente de desenvolvimento que nos possibilite trabalhar com a Allegro em C.
 Abaixo vamos tratar de itens como compiladores, bibliotecas externas (dependências), IDE de desenvolvimento.
 Na maioria dos casos os fontes das bibliotecas serão baixados e compilados utilizando o compilador que estaremos trabalhando.
+
+Este tutorial descreve a configuração do ambiente de desenvolvimento em _Windows_, utilizando a IDE _Eclipse CDT_ e o _MinGW_ com seu **_port_** do GCC para Windows.
 
 **Nos passos abaixo são sugeridos alguns diretórios padronizados, como _c:\Allegro5_, _c:\MinGW_ ou _c:\temp_**
 
@@ -64,7 +65,7 @@ Configurando as variáveis de ambiente
 
 Allegro 5
 ---------------------------
-* [Allegro5](http://alleg.sourceforge.net/download.html) *Compilado*
+* [Allegro5](http://alleg.sourceforge.net/download.html) *Código Fonte*
 	- Baixe a versão mais atual (allegro-5.0.7.zip) da Allegro
 	- Descompacte na pasta C:/Allegro5
 	- Crie um diretorio "build" dentro desta pasta (C:/Allegro5/build)
@@ -72,7 +73,9 @@ Allegro 5
 
 Dependências da Allegro
 ---------------------------
-* [Ogg (libogg)](http://xiph.org/downloads/) *Compilado*
+**Abaixo cada dependência tem um link para seu site oficial. Para facilitar, coloquei no [dropbox](https://www.dropbox.com/sh/co2bzmkbjuma2sh/oHcW18R44D/pi/allegro5-deps) estes pacotes.**
+
+* [Ogg (libogg)](http://xiph.org/downloads/) *Código Fonte*
 	- descompacte para a pasta c:/temp/libogg
 	- C:\MinGW\msys\1.0\msys.bat
 		- cd c:/temp/libogg
@@ -84,7 +87,7 @@ Dependências da Allegro
 	- copie de C:\MinGW\msys\1.0\local para C:\MinGW
 	- apague o conteudo de C:\MinGW\msys\1.0\local
 
-* [Vorbis(libvorbis)](http://xiph.org/downloads/) *Compilado*
+* [Vorbis(libvorbis)](http://xiph.org/downloads/) *Código Fonte*
 	- descompacte para a pasta c:/temp/libvorbs
 	- C:\MinGW\msys\1.0\msys.bat
 		- cd c:/temp/libvorbs
@@ -95,7 +98,7 @@ Dependências da Allegro
 	- copie de C:\MinGW\msys\1.0\local as pastas para a pasta C:/Allegro5/deps/libvorbis
 	- apague o conteudo de C:\MinGW\msys\1.0\local
 
-* [FLAC](http://sourceforge.net/projects/flac/files/flac-src/flac-1.2.1-src/) *Compilado*
+* [FLAC](http://sourceforge.net/projects/flac/files/flac-src/flac-1.2.1-src/) *Código Fonte*
 	- descompacte para a pasta c:/temp/flac
 	- C:\MinGW\msys\1.0\msys.bat
 		- cd c:/temp/flac
@@ -106,7 +109,7 @@ Dependências da Allegro
 	- copie de C:\MinGW\msys\1.0\local as pastas para a pasta C:/Allegro5/deps/flac
 	- apague o conteudo de C:\MinGW\msys\1.0\local
 
-* [DUMB](http://dumb.sourceforge.net/) *Compilado*
+* [DUMB](http://dumb.sourceforge.net/index.php?page=downloads) *Código Fonte*
 	- descompacte para a pasta c:/temp/dumb
 	- vá para o prompt de comando (iniciar -> executar -> cmd) 
 	- cd c:/temp/dumb
