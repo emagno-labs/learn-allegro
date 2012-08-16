@@ -44,10 +44,32 @@ Compilador e _build system_
 	- next -> next -> escolher download latest repository catalogs e next -> next -> next -> escolher os compiladores C, C++ e MinGW Developer Toolkit e next -> Install
 
 	- Pequena correção de um cabeçalho (.h) do MinGW:
-		- Abra o "limits.h" que está em "C:/mingw/include" e inclua:
-			- #define SIZE_T_MAX UINT_MAX /* max value for a size_t */
-		- antes de (é a última linha do arquivo)
-			- #endif /* not _LIMITS_H_ */
+		- Abra o arquivo _limits.h_ que está em _C:/mingw/include_ e encontre o trecho de código abaixo (final do arquivo)
+<pre><code>
+/* MSVC compatibility */
+#define _I64_MIN LONG_LONG_MIN
+#define _I64_MAX LONG_LONG_MAX
+#define _UI64_MAX ULONG_LONG_MAX
+#endif /* Not Strict ANSI and GNU C compiler */
+#endif /* not _LIMITS_H_ */
+</code></pre>
+
+		- Inclua o código abaixo antes da última linha
+<pre><code>
+#define SIZE_T_MAX UINT_MAX /* max value for a size_t */
+</code></pre>
+
+		- O resultado final deve ser este (pode ter umas linhas em branco entre os comandos =]):
+<pre><code>
+/* MSVC compatibility */
+#define _I64_MIN LONG_LONG_MIN
+#define _I64_MAX LONG_LONG_MAX
+#define _UI64_MAX ULONG_LONG_MAX
+#endif /* Not Strict ANSI and GNU C compiler */
+#define SIZE_T_MAX UINT_MAX /* max value for a size_t */
+#endif /* not _LIMITS_H_ */
+</code></pre>
+
 
 * [Cmake](http://cmake.org/cmake/resources/software.html)
 	- Baixar o instalador Windows (Win32 Installer)
