@@ -33,7 +33,7 @@ Este tutorial descreve a configuração do ambiente de desenvolvimento em _Windo
 
 Caso queira utilizar outros diretorios duas dicas:
 
-* Não utilize _espaços_ no nome dos diretórios: _"Meus Documentos"_ ou "Trabalho Facul" são exemplos que darão erro.
+* Não utilize _espaços_ no nome dos diretórios: _"Meus Documentos"_ ou _"Trabalho Facul"_ são exemplos que darão erro.
 * Não se esqueça de substituir os caminhos mostrados no tutorial pelos caminhos que você escolheu. Óbvio. ¬¬
 
 
@@ -104,6 +104,7 @@ Dependências da Allegro
 		- cd c:/temp/flac
 		- ./configure
 		- make
+			- _Alguns erros podem ser exibidos no final do processo, se forem relacionados a pasta **examples** são erros esperados. Não se preocupe, a biblioteca terá sido compilada com sucesso._
 		- make install
 	- crie o diretorio "flac" em C:/Allegro5/deps
 	- copie de C:\MinGW\msys\1.0\local as pastas para a pasta C:/Allegro5/deps/flac
@@ -122,7 +123,7 @@ Dependências da Allegro
 * [OpenAL](http://kcat.strangesoft.net/openal.html) *Binários*
 	- baixe os binários para Windows
 	- descompacte para a pasta c:/temp/openal
-	- crie o diretorio "dumbs" em C:/Allegro5/deps
+	- crie o diretorio "openal" em C:/Allegro5/deps
 	- copie de c:/temp/openal as pastas "lib" e "include" para a pasta C:/Allegro5/deps/openal
 
 * [FreeType](http://gnuwin32.sourceforge.net/packages/freetype.htm) *Binários*
@@ -143,6 +144,7 @@ Compilando a Allegro 5
 * Abra o prompt de comando (CMD) e vá para o diretorio C:/Allegro5/build
 * Digite os comandos:
 	- cmake .. -G "MinGW Makefiles"
+		- **Cuidado!** É _case sensitive_
 	- mingw32-make
 	- mingw32-make install
 
@@ -161,22 +163,25 @@ Instalando a IDE Eclipse CDT
 Configurando a IDE Eclipse CDT
 -------------------------
 
-* Abra o Eclipse e crie um novo projeto C do tipo “Executable - Empty Project”
-* Escolha "MinGW GCC" nas opções "Toolchains"
+* Abra o Eclipse e crie um novo projeto C 
+* Dê um nome para seu projeto, por exemplo **TesteAllegro**
+* Em **Project Type** escolha _Executable -> Empty Project_
+* Em **Toolchains** escolha _MinGW GCC_
 * Clique em Next -> Advanced settings...
-* Selecione  “C/C++ Build”
-* Selecione “Settings”
+* Selecione  _C/C++ Build -> Settings_
 * Selecione “Configuration:” = “[All configurations]"
-* Selecione  “MinGW C Linker”
-* Selecione “Libraries”
-* Na seção “Librairies (-l)” adicione "liballegro"
-* Na seção  “Librairy search path (-L)” adicione “C:\MinGW\lib”
-* Crie um novo arquivo de fonte C
+* Selecione  _MinGW C Linker -> Libraries_
+* Na seção **Librairies (-l)** adicione *liballegro* e *liballegro_dialog*
+* Na seção **Librairy search path (-L)** adicione _C:\MinGW\lib_
+* Clique em Ok -> Finish
+* Crie um novo _Source File_ 
+* Dê um nome para seu código fonte, por exemplo **primeiroTeste.c** -> Finish
 * Insira o código abaixo:
 
 <pre><code>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_native_dialog.h>
+
+#include &lt;allegro5/allegro.h&gt;
+#include &lt;allegro5/allegro_native_dialog.h&gt;
 
 int main(void) {
 	ALLEGRO_DISPLAY *display = NULL;
@@ -195,7 +200,7 @@ int main(void) {
 		return -1;
 	}
 
-	al_show_native_message_box(display, "Algum Titulo", "Resultado da configuração:",
+	al_show_native_message_box(display, "Algum Titulo", "Resultado da configuracao:",
 					"Tudo okay!", NULL, NULL );
 
 	al_destroy_display(display);
@@ -204,9 +209,10 @@ int main(void) {
 }
 </code></pre>
 
-* "Build" o projeto
-* Copie a C:\allegro5\build\lib\allegro.dll e coloque no diretório Debug
-* Execute o projeto
+* _Build_ o projeto (_Ctrl+B_ ou no menu _Project -> Build Project_). **Não execute o projeto ainda.**
+* Copie a _C:\allegro5\build\lib\allegro-5.0.dll_ e coloque no diretório **Debug** do seu projeto (este diretório é criado quando fazemos o _Build_ do projeto)
+* Refaça o _Build_ do projeto. **Agora não devem ser apresentados erros no código!**
+* Execute o projeto =]
 
 
 ----------------------
