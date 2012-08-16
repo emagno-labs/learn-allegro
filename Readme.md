@@ -224,9 +224,9 @@ int main(void) {
 
 Material de apoio para este _walkthrough_
 -------------------------
-* [Building Allegro 5.1 (rev 15032) Windows 7](http://wiki.allegro.cc/index.php?title=Building_Allegro_5.1_(rev_15032)_Windows_7)
+* [Building Allegro 5.1 (rev 15032) Windows 7] [4]
 
-* [Setting up Allegro to work with Eclipse on Windows XP](http://wiki.allegro.cc/index.php?title=Eclipse#Setting_up_Allegro_to_work_with_Eclipse_on_Windows_XP)
+* [Setting up Allegro to work with Eclipse on Windows XP] [5]
 
 * Allegro 5 _Readme.txt_ (arquivo texto que vem junto com os códigos fontes e se encontra na raiz do diretório da Allegro)
 
@@ -237,3 +237,5 @@ Outros links úteis: [Allegro Community] [1],
   [1]: http://www.allegro.cc/ "Allegro Community"
   [2]: http://wiki.allegro.cc/ "Allegro Wiki"
   [3]: http://www.deitel.com/ResourceCenters/Programming/C/AllegroCGameProgramming/tabid/223/Default.aspx "Deitel Allegro Resources"
+  [4]: http://wiki.allegro.cc/index.php?title=Building_Allegro_5.1_(rev_15032)_Windows_7 "Building Allegro 5.1"
+  [5]: http://wiki.allegro.cc/index.php?title=Eclipse#Setting_up_Allegro_to_work_with_Eclipse_on_Windows_XP "Setting up Allegro to work with Eclipse on Windows XP"
