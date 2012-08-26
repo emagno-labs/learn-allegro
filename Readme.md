@@ -36,6 +36,7 @@ Caso queira utilizar outros diretorios duas dicas:
 * Não utilize _espaços_ no nome dos diretórios: _"Meus Documentos"_ ou _"Trabalho Facul"_ são exemplos que darão erro.
 * Não se esqueça de substituir os caminhos mostrados no tutorial pelos caminhos que você escolheu. Óbvio. ¬¬
 
+**Para Ubuntu (Linux) utilize outro tutorial descrito [aqui](http://wiki.allegro.cc/index.php?title=Install_Allegro5_From_Git/Linux/Debian)**
 
 Compilador e _build system_
 -----------------------------
@@ -206,6 +207,12 @@ Instalando a IDE Eclipse CDT
 	- Escolher a versão compatível com o sistema operacional
 	- Baixar e descompactar em alguma pasta. Eclipse pronto!
 
+**Para instalar a JDK no Ubuntu Linux**
+<pre><code>
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+</code></pre>
 
 Configurando a IDE Eclipse CDT
 -------------------------
