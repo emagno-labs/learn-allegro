@@ -242,7 +242,7 @@ int main(void) {
 
 	if (!al_init()) {
 		al_show_native_message_box(NULL, NULL, NULL,
-				"failed to initialize allegro!", NULL, NULL );
+				"failed to initialize allegro!", NULL, 0 );
 		return -1;
 	}
 
@@ -250,12 +250,12 @@ int main(void) {
 
 	if (!display) {
 		al_show_native_message_box(NULL, NULL, NULL,
-				"failed to initialize display!", NULL, NULL );
+				"failed to initialize display!", NULL, 0 );
 		return -1;
 	}
 
 	al_show_native_message_box(display, "Algum Titulo", "Resultado da configuracao:",
-					"Tudo okay!", NULL, NULL );
+					"Tudo okay!", NULL, 0 );
 
 	al_destroy_display(display);
 
